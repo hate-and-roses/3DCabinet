@@ -1,0 +1,95 @@
+doctype html
+html
+  head
+
+    meta(charset="UTF-8")
+    title The Shelf
+
+    //- meta(property="fb:app_id",content="000000000000000")
+    //- meta(property="og:title",content="...")
+    //- meta(property="og:type",content="website")
+    //- meta(property="og:url", content="...")
+    //- meta(property="og:description",content="...")
+    //- meta(property="og:image", content="...")
+    //- meta(property="og:image:width", content="...")
+    //- meta(property="og:image:height", content="...")
+
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    meta(name="theme-color", content="#222")
+    link(rel="icon", sizes="192x192", href="/i/layout/favicon.png")
+    base(href="/")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto")
+    link(rel="stylesheet", href="css/style.css")
+    script
+
+  body
+    .room.js-room
+        .wall.is-n
+        .wall.is-e.has-img
+            img(src="i/paintings.png")
+        .wall.is-w
+        .wall.is-b
+        .wall.is-t
+
+        .shelf
+            .shelf-side.is-t
+            .shelf-side.is-e
+            .shelf-side.is-w
+            .shelf-side.is-shadow
+
+            .shelf-board
+                .book.js-book
+                    .pages
+                        .pages-item
+                        .pages-item
+                .book.js-book
+                    .pages
+                        .pages-item
+                        .pages-item
+                .book.js-book
+                    .pages
+                        .pages-item
+                        .pages-item
+                .book.js-book
+                    .pages
+                        .pages-item
+                        .pages-item
+                .book.js-book
+                    .pages
+                        .pages-item
+                        .pages-item
+            .shelf-board
+                .book.js-book
+                    .pages
+                        .pages-item
+                        .pages-item
+            .shelf-board
+                .book.js-book
+                    .pages
+                        .pages-item
+                        .pages-item
+            .shelf-board
+                .book.js-book
+                    .pages
+                        .pages-item
+                        .pages-item
+            .shelf-board
+                .book.js-book
+                    .pages
+                        .pages-item
+                        .pages-item
+            .shelf-board
+                .book.js-book
+                    .pages
+                        .pages-item
+                        .pages-item
+            .shelf-board
+                .book.js-book
+                    .pages
+                        .pages-item
+                        .pages-item
+            .shelf-doors
+                .shelf-doors_item.js-door
+                .shelf-doors_item.js-door
+                .shelf-doors_item.js-door
+    script(src="js/app.min.js")

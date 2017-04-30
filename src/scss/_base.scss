@@ -1,0 +1,29 @@
+html{
+	width: 100vw;
+  height: 100vh;
+}
+*,
+*:before,
+*:after{
+  box-sizing: border-box;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  font-family: $ffamily;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  perspective-origin: 50% 50%;
+  perspective:1000px;
+}
+
+
+.is-hidden{
+  display: none !important;
+}
+
+

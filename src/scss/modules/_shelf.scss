@@ -1,0 +1,139 @@
+.shelf{
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  right: 0;
+  width: 80%;
+  height: 80%;
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  background: #5F2F00;
+  // box-shadow: 0 0 1px 1px #5F2F00;
+  transform: translateZ(1px);
+  transform-style: preserve-3d;
+  box-shadow: 20px 0 40px rgba(0,0,0,.5), -20px 0 40px rgba(0,0,0,.5);
+
+
+  &-side{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex: 0;
+
+    &.is-t{
+      width: 100%;
+      height: $refSize;
+      transform: rotateY(-90deg) rotateX(90deg) rotateZ(-90deg);
+      transform-origin: 0% 0%;
+      background: #703700;
+    }
+    &.is-e{
+      width: $refSize;
+      height: 102%;
+      left: auto;
+      right: 0;
+      transform: rotateY(90deg);
+      transform-origin: 100% 0%;
+      background: #422203;
+      z-index: 1;
+    }
+    &.is-w{
+      width: $refSize;
+      height: 102%;
+      transform: rotateY(-90deg);
+      transform-origin: 0% 0%;
+      background: #422203;
+    }
+
+    &.is-shadow{
+      width: 100%;
+      height: $refSize;
+      top: auto;
+      bottom: -2%;
+      transform: rotateX(-90deg);
+      transform-origin: 0% 100%;
+      background: rgba(0,0,0,.3);
+      box-shadow: 0 0 25px 5px rgba(0,0,0,.3);
+    }
+  }
+
+  &-board{
+
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    width: 100%;
+    max-height: 100%;
+    padding-top: 1vw;
+    // box-shadow: 0 0 1px 1px #611500;
+    transform: translateZ($refSize);
+    transform-style: preserve-3d;
+
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: $refSize;
+      transform: rotateX(90deg);
+      transform-origin: 0% 101%;
+      background: #834F1D;
+    }
+    &:after{
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: $refSize;
+      transform: rotateX(90deg);
+      transform-origin: 0% 100%;
+      background: #A76321;
+    }
+  }
+
+  &-doors{
+    position: absolute;
+    display: flex;
+    flex-flow: row nowrap;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width:100%;
+    transform: translateZ($refSize);
+    transform-style: preserve-3d;
+
+    &_item{
+      position: relative;
+      height: 100%;
+      width: 50%;
+      background: #703700;
+      pointer-events: auto;
+      transform-style: preserve-3d;
+
+      &:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #703700;
+        cursor: pointer;
+        box-shadow: inset 0 0 0 1px #4E2600,
+                    inset 0 0 0 6px #703700,
+                    inset 0 0 0 9px #4E2600,
+                    0 0 1px rgba(0,0,0,.3);
+        transform: translateZ(5px);
+      }
+    }
+
+  }
+}

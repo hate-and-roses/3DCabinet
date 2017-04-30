@@ -1,0 +1,59 @@
+.book{
+  position: relative;
+  height: 100%;
+  width: 1vw;
+  margin: -1px 2px 0;
+  cursor: pointer;
+  background: #095605;
+  transform-style: preserve-3d;
+  transform: translateZ(-1vw/2);
+  transition: all .3s;
+  pointer-events: auto;
+
+  @include media('<=tablet') {
+    width: 2vw;
+    margin: -1px 1px 0;
+  }
+
+  &:before,
+  &:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: calc(#{$refSize} - 1vw);
+    height: 100%;
+    transform-origin: 0% 0%;
+    background: #063304;
+    transform: rotateY(90deg);
+  }
+  &:after{
+    right: auto;
+    left: 0;
+  }
+
+  &:focus,
+  &:hover{
+    background: lighten(#095605,10%);
+    transform: translateZ(1vw);
+    &:before,
+    &:after{
+      background: lighten(#063304,5%);
+    }
+  }
+
+  &.is-opened {
+    width: 1px;
+    align-self: center;
+    outline: none !important;
+    transform: translateZ(10vw) rotateY(-180deg);
+
+    &:before,
+    &:after{
+      transform: rotateY(30deg);
+    }
+    &:after{
+      transform: rotateY(160deg);
+    }
+  }
+}
